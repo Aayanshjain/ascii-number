@@ -1,5 +1,5 @@
 // Create a reference for the canvas\
-canvas=document.getElementById('canvas');
+canvas=document.getElementById('myCanvas');
 ctx=canvas.getContext("2d");
 img_width = 300;
 img_height = 100;
@@ -28,27 +28,33 @@ function my_keydown(e)
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
 	
-		if((keyPressed >=97 && keyPressed<=12)|| (keyPressed >=65 && keyPressed<=90))
+		if((keyPressed >=97 && keyPressed<=122)|| (keyPressed >=65 && keyPressed<=90))
 		{
-		alphabetkey();
+		aplhabetkey();
 		document.getElementById("d1").innerHTML="you have presses the alphabet key";
+		console.log("alphabetkey");
 	}
 		//write a code to check the type of key pressed
 		else if(keyPressed >=48 && keyPressed<=57 ){
 			numberkey();
 			document.getElementById("d1").innerHTML="you have pressed number key";
+			console.log("numberkey");
 		}
 		else if(keyPressed >=37 && keyPressed<=40 ){
 			arrowkey();
+			
 			document.getElementById("d1").innerHTML="you have pressed arrow key";
+			console.log("arrowkey");
 		}
 		else if(keyPressed= 18 , keyPressed =17 , keypressed=27 ){
 			specialkey();
 			document.getElementById("d1").innerHTML="you have pressed specialkey";
+			console.log("specialkey");
 		}
 	else {
 		otherkey();
 		document.getElementById("d1").innerHTML="You pressed symbol or other key";
+		console.log("otherkey");
 	}
 }
 
